@@ -1,4 +1,4 @@
-# LaTeX-Samples
+# CV Template
 
 CVEN - an example CV using the template
 

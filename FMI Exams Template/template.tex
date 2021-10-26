@@ -1,0 +1,146 @@
+\documentclass[a4paper,9pt]{extarticle}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[bulgarian]{babel}
+
+\newcommand\examname{Изпит върху Цицерон}
+\newcommand\examdate{2013 г.}
+\newcommand\setsize{\footnotesize}%\normalsize,\small,\footnotesize
+
+\newcommand\varianta{
+  \warning
+
+  \begin{problem}
+    On the other hand, we denounce with righteous indignation and
+    dislike men who are so beguiled and demoralized by the charms of
+    pleasure of the moment, so blinded by desire, that they cannot
+    foresee the pain and trouble that are bound to ensue; and equal
+    blame belongs to those who fail in their duty through weakness of
+    will, which is the same as saying through shrinking from toil and
+    pain. These cases are perfectly simple and easy to distinguish. In
+    a free hour, when our power of choice is untrammelled and when
+    nothing prevents our being able to do what we like best, every
+    pleasure is to be welcomed and every pain avoided.
+  \end{problem}
+  \begin{problem}
+    But in certain circumstances and owing to the claims of duty or
+    the obligations of business it will frequently occur that
+    pleasures have to be repudiated and annoyances accepted. The wise
+    man therefore always holds in these matters to this principle of
+    selection: he rejects pleasures to secure other greater pleasures,
+    or else he endures pains to avoid worse pains.
+  \end{problem}
+
+  \wish
+}
+
+\newcommand\variantb{
+  \warning
+
+  \begin{problem}
+    At vero eos et accusamus et iusto odio dignissimos ducimus qui
+    blanditiis praesentium voluptatum deleniti atque corrupti quos
+    dolores et quas molestias excepturi sint occaecati cupiditate non
+    provident, similique sunt in culpa qui officia deserunt mollitia
+    animi, id est laborum et dolorum fuga. Et harum quidem rerum
+    facilis est et expedita distinctio. Nam libero tempore, cum soluta
+    nobis est eligendi optio cumque nihil impedit quo minus id quod
+    maxime placeat facere possimus, omnis voluptas assumenda est,
+    omnis dolor repellendus.
+  \end{problem}
+  \begin{problem}
+    Temporibus autem quibusdam et aut officiis debitis aut rerum
+    necessitatibus saepe eveniet ut et voluptates repudiandae sint et
+    molestiae non recusandae. Itaque earum rerum hic tenetur a
+    sapiente delectus, ut aut reiciendis voluptatibus maiores alias
+    consequatur aut perferendis doloribus asperiores repellat.
+  \end{problem}
+
+  \wish
+ }
+
+\newcommand\warning{\textbf{\scriptsize{}Да няма лист, на който е писано по повече от една задача!}}
+\newcommand\wish{\textit{Пожелаваме ви приятна и успешна работа!}}
+
+%\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsfonts}                
+\usepackage{enumerate}
+% \usepackage{array}
+\usepackage{multirow}
+\usepackage{alltt}
+%\usepackage[active]{srcltx}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Зад.}
+
+\setlength{\textwidth}{210mm} 
+\setlength{\textheight}{297mm} 
+\setlength{\topmargin}{0mm} 
+\setlength{\voffset}{-1in} 
+\setlength{\hoffset}{-1in}
+\setlength{\headheight}{0mm}
+\setlength{\headsep}{0mm}
+\parindent 0.5cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+
+\newcommand{\Nat}{\mathbb{N}}
+\newcommand{\Int}{\mathbb{Z}}
+\newcommand{\Real}{\mathbb{R}}
+
+%Единствен аргумент е номерът на варианта
+\newcommand{\ExamHeader}[1]{
+  {%
+    \footnotesize%
+    \begin{tabular}{|c|c|c|c|c|c|}
+      \hline
+      вариант & ф. номер & група & поток & курс & специалност \\
+      \hline
+      \multirow{2}{*}{\bf\large #1} & & & & & \\
+      & & & & & \\
+      \hline
+      \multirow{2}{*}{Име:} & \multicolumn{5}{|c|}{}\\
+    & \multicolumn{5}{|c|}{}\\
+      \hline
+    \end{tabular}
+  }
+  \centerline{\examname}
+  \centerline{\examdate}
+}
+
+\newcommand\twominipages{
+  \noindent\hfill
+  \begin{minipage}[t]{82mm}
+    \ExamHeader{1}
+    \setcounter{problem}{0}
+
+    \varianta
+  \end{minipage}
+  \hfill\hfill
+  \begin{minipage}[t]{82mm}
+    \ExamHeader{2}
+    \setcounter{problem}{0}
+
+    \variantb
+  \end{minipage}
+  \hspace*{\fill}
+}
+
+
+\begin{document}\thispagestyle{empty} \setsize
+
+\vspace*{10mm}
+\twominipages
+
+\vspace*{10mm}\vfill
+\twominipages
+
+\vspace*{10mm}\vfill
+\twominipages
+
+\vfill
+\vspace*{10mm}
+\end{document}
